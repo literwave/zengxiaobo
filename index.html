@@ -53,7 +53,7 @@
                     <span class="say">制造两人对视的画面 即刻沦陷</span><br>
                     <span class="say">我很难爱上别人偏偏对你满怀热烈</span><br>
                     <span class="say">那形同虚设的心等你闯进用爱了解</span><br>
-                    <span class="say">起风而相遇 终于不老 誓言<span class="space">--晚风告白</span></span>
+                    <span class="say">起风而相遇 终于不老 誓言<span class="space"><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--晚风告白</span></span>
                 </font>
                 </p>
             </div>
@@ -73,6 +73,15 @@
 <!--==========================================================-->
 <script>
     (function(){
+        
+        var music = document.querySelector("audio");
+        document.addEventListener("WeixinJSBridgeReady", function () {
+        music.play();  //音乐播放
+        }, false);
+            music.onended = function () {
+            music.load();
+            music.play();
+        }
         var canvas = $('#canvas');
         if (!canvas[0].getContext) {
             $("#error").show();
